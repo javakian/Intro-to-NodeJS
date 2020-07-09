@@ -1,6 +1,7 @@
 var http = require('http');     //want to access the file system
 var fs = require('fs');
 var url = require('url');
+const PORT = process.env.PORT || 5000
 
 
 http.createServer(function(req, res) {
@@ -20,6 +21,6 @@ http.createServer(function(req, res) {
         res.write(data);
         return res.end();
     });
-}).listen(8080);
+}).listen(PORT);
 
 console.log("Server listening on port 8080...");
